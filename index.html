@@ -25,6 +25,40 @@
 <title>Taskly</title>
 </head>
 <body>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add new task</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="imageurl" class="form-label">Image Url</label>
+            <input type="url" class="form-control" id="imageurl">
+          </div>
+          <div class="mb-3">
+            <label for="tasktitle" class="form-label" >Task title</label>
+            <input type="text" class="form-control" id="tasktitle" placeholder="tasktitle">
+          </div>
+         
+          <div class="mb-3">
+            <label for="taskdescription" class="form-label">Task  Description</label>
+              <textarea
+              rows="6"
+              class="form-contorl"
+              id="taskdescription">
+            </textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
@@ -42,8 +76,8 @@
             </ul>
             <form class="d-flex">
               
-              <button type="button" class="btn btn-primary">
-                <i class="fas fa-plus"></i> Add new</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fas fa-plus "></i> Add new</button>
             </form>
           </div>
         </div>
@@ -61,7 +95,7 @@
       </div>
       <!-- cards -->
         <section>
-          <div class="row">
+          <div class="row task_container">
             <div class="col-md-6 col-lg-4">
               <div class="card">
                 <div class="card-header d-flex justify-content-end gap-2">
@@ -89,5 +123,6 @@
     
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>    
+<script src="index.js"></script>
 </body>
 </html>
